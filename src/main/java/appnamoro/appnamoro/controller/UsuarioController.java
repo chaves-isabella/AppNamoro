@@ -1,4 +1,4 @@
-package controller;
+package appnamoro.appnamoro.controller;
 
 import appnamoro.appnamoro.Usuario;
 import org.springframework.web.bind.annotation.*;
@@ -25,7 +25,7 @@ public class UsuarioController {
 
     @GetMapping
     public List<Usuario> mostrarUsuario(){
-    return listaUsuario;
+        return listaUsuario;
     }
 
 //metodo para buscar usuario por id
@@ -39,7 +39,7 @@ public class UsuarioController {
         return null;
     }
 
-//
+//deletar usuario
     @DeleteMapping("/{id}")
     public String deletarUsuario(@PathVariable Long id) {
         boolean removido = listaUsuario.removeIf(pessoa -> pessoa.getIdUsuario().equals(id));
